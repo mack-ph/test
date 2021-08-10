@@ -158,6 +158,13 @@ func initaliseHandlers(router *gin.Engine) {
 	router.POST("/upload", Upload)
 
 	router.GET("/getwater_d/:name", controllers.GetWaterDByID)
+	router.GET("/water_level/:name", controllers.GetWaterLevelByID)
+	router.GET("/water_ph/:name", controllers.GetWaterLevelByID)
+	router.GET("/water_FluorideIon/:name", controllers.GetWaterLevelByID)
+	router.GET("/water_DissolvedSolids/:name", controllers.GetWaterLevelByID)
+	router.GET("/water_salinity/:name", controllers.GetWaterLevelByID)
+	router.GET("/water_node", controllers.GetWaterNode)
+
 }
 
 func initDB() {
